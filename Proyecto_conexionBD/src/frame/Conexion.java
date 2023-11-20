@@ -3,6 +3,7 @@ package frame;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 /*import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.DefaultComboBoxModel;
@@ -30,7 +31,7 @@ public class Conexion {
         try{
             this.conectar = DriverManager.getConnection(this.bd, this.usuario, this.password);
         
-        }catch(Exception e){
+        }catch(SQLException e){
             System.out.println("Error-> "+e.getMessage());
         }
         
