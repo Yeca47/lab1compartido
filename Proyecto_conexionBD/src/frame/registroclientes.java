@@ -111,6 +111,7 @@ public class registroclientes extends javax.swing.JFrame {
         jTextField10 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        Retroceder = new javax.swing.JButton();
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -218,7 +219,21 @@ public class registroclientes extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 420, 130, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 500, 130, 50));
+
+        Retroceder.setBackground(new java.awt.Color(102, 102, 102));
+        Retroceder.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        Retroceder.setForeground(new java.awt.Color(225, 225, 225));
+        Retroceder.setText("Atras");
+        Retroceder.setMaximumSize(new java.awt.Dimension(97, 31));
+        Retroceder.setMinimumSize(new java.awt.Dimension(97, 31));
+        Retroceder.setPreferredSize(new java.awt.Dimension(97, 31));
+        Retroceder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RetrocederActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Retroceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 430, 130, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -232,6 +247,15 @@ public class registroclientes extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         registarClientes();
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void RetrocederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetrocederActionPerformed
+        // Crear una instancia del frame del menú
+        menu menuFrame = new menu();
+        // Hacer visible el frame del menú
+        menuFrame.setVisible(true);
+        // Cerrar el frame actual si es necesario
+        this.dispose();    // TODO add your handling code here:
+    }//GEN-LAST:event_RetrocederActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,6 +293,7 @@ public class registroclientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Retroceder;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
